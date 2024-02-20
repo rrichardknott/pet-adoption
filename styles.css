@@ -4,6 +4,9 @@ html {
   margin: 0 auto;
   box-sizing: border-box;
 }
+html{
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: "Source Sans 3", sans-serif;
@@ -88,6 +91,7 @@ body {
 #view-pets {
   background-color: #475aff;
   border: 2px solid #475aff;
+  text-decoration: none;
 }
 
 #manage-pets {
@@ -168,7 +172,6 @@ body {
   column-gap: 34px;
   row-gap: 34px;
   flex-wrap: wrap;
- 
 }
 
 .pet-card {
@@ -236,16 +239,15 @@ footer {
   }
 }
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 500px) {
   .pet-card-photo img {
     height: 150px;
     width: 150px;
-  
   }
 }
 
-@media screen and (max-width: 400px){
-  .top-page-section-button-wrapper{
+@media screen and (max-width: 400px) {
+  .top-page-section-button-wrapper {
     flex-direction: column;
   }
 }
