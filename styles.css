@@ -4,7 +4,7 @@ html {
   margin: 0 auto;
   box-sizing: border-box;
 }
-html{
+html {
   scroll-behavior: smooth;
 }
 
@@ -241,8 +241,12 @@ footer {
 
 @media screen and (max-width: 500px) {
   .pet-card-photo img {
-    height: 150px;
-    width: 150px;
+    /* height: 150px;
+    width: 150px; */
+    width: 100%;
+  }
+  .pet-card {
+    flex-direction: column;
   }
 }
 
