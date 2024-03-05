@@ -19,6 +19,7 @@ const petsArea = async () => {
   const petsData = await petsPromise.json();
   petsData.forEach((pet) => {
     const clone = template.content.cloneNode(true);
+    clone.querySelector(".pet-card").dataset.species = pet.species;
     clone.querySelector("h3").textContent = pet.name;
     clone.querySelector(".pet-description").textContent = pet.description;
     clone.querySelector(".pet-birth-year").textContent = getAge(pet.birthYear);
@@ -50,13 +51,19 @@ const getAge = (birthYear) => {
 };
 
 //============ pet filter code ==============//
-const allButtons = document.querySelectorAll(".pet-filter button")
+const allButtons = document.querySelectorAll(".pet-filter button");
+
+const handleButtonClick = (e) => {
+  const currentFilter = e.target.dataset.filter;
+  document.querySelectorAll(".pet-card").forEach((el) => {
+    if (currentFilter == el.dataset.species || currentFilter == "all") {
+      el.style.display = "flex";
+    } else {
+      el.style.display = "none";
+    }
+  });
+};
 
 allButtons.forEach((btn) => {
-  btn.addEventListener("click", handleButtonClick)
-})
-
-handleButtonClick() {
-  
-}
-
+  btn.addEventListener("click", handleButtonClick);
+});
