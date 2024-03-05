@@ -48,3 +48,15 @@ const getAge = (birthYear) => {
   if (age == 0) return "Less than a year old";
   return `${age} years old`;
 };
+
+//============ pet filter code ==============//
+const allButtons = document.querySelectorAll(".pet-filter button")
+
+allButtons.forEach((btn) => {
+  btn.addEventListener("click", handleButtonClick)
+})
+
+handleButtonClick() {
+  
+}
+

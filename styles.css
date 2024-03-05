@@ -161,10 +161,17 @@ body {
   cursor: pointer;
 }
 
-.pet-filter button:focus {
-  color: darkblue;
+.pet-filter button:hover {
+  color: #7d7d7d;
+}
+
+.pet-filter button:focus
+ {
+  color: #475aff;
   text-decoration: underline;
 }
+
+
 
 .list-of-pets {
   display: flex;
